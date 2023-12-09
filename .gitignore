@@ -4,7 +4,7 @@ data/*
 models/*
 reports/*
 prefect/*
-dev/
+.dev/
 .python-version
 
 # MLFlow 
