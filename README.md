@@ -1,37 +1,31 @@
-# Model Registry with MLFlow
+# Tutorial: MLFlow for Data Science
 
-This example shows the [MLFlow Metrics Tracking](https://mlflow.org/docs/latest/tracking.html) and  [MLFlow Model Registry](https://www.mlflow.org/docs/latest/model-registry.html#) workflows
+![Model Registry with MLFlow](docs/images/mlflow-banner-1.png)
 
-The repository is based on the [mlflow_monitoring](https://gith ub.com/evidentlyai/evidently/tree/main/examples/integrations/mlflow_monitoring) integration example from [Evidently](https://www.evidentlyai.com/)
+## 👩‍💻 Installation
 
-![Model Registry with MLFlow](static/banner.png)
+Структура репозитория
 
---------
-Repository Structure
+    .
+    ├── README.md           # Инструкции по установике и запуску проекта
+    ├── data                # Файлы данных, используемые в проекте.
+    ├── docs                # Файлы для документации (images)
+    ├── models              # Директория для ML моделей 
+    ├── notebooks           # Jupyter-блокноты 
+    ├── requirements.txt    
+    ├── src                 # Код примеров и утилит
+    └── tutorial.md         # Тьюториал: MLFlow for Data Science
 
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── config             <- Configs directory
-    ├── data               <- Datasets
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    ├── notebooks          <- Example Jupyter Notebook
-    └── static             <- Assets for docs 
-     
 
-## :woman_technologist: Installation
 
 ### 1. Fork / Clone this repository
 
-Get the tutorial example code:
-
 ```bash
-git clone git@gitlab.com:mlrepa/mr/mr-1-bike-sharing-mlflow
-cd bike-sharing-mlflow
+git clone https://gitlab.com/risomaschool/tutorials-raif/mlflow-1-metrics-tracking.git
+cd mlflow-1-metrics-tracking
 ```
 
-
 ### 2. Create a virtual environment
-
-- This example requires Python 3.9 or above 
 
 ```bash
 python3 -m venv .venv
@@ -41,16 +35,21 @@ pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
 ```
 
+Notes:
+
+- This example requires Python 3.9 or above 
+- Tested on Mac OS
+
 
 ### 4 - Download data
 
-This is a preparation step. Load data from [https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset) to the `data/` directory
+Load data from [https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset) to the `data/` directory
 
 ```bash 
 python src/load_data.py              
 ```
 
-## :tv: Run MLflow UI
+## 📺 Run MLflow UI
 
 ```bash
 mlflow ui
@@ -59,12 +58,15 @@ And then navigate to [http://localhost:5000](http://localhost:5000) in your brow
 
 
 ## 🎓 Run the tutorial
+
 ```bash
 jupyter lab
-``` 
+```
 
 
 ## Acknowledgments
+
+The repository is based on the [mlflow_monitoring](https://github.com/evidentlyai/evidently/tree/main/examples/integrations/mlflow_monitoring) integration example from [Evidently](https://www.evidentlyai.com/)
 
 The dataset used in the example is downloaded from: https://www.kaggle.com/c/bike-sharing-demand/data?select=train.csv
 - Fanaee-T, Hadi, and Gama, Joao, 'Event labeling combining ensemble detectors and background knowledge', Progress in Artificial Intelligence (2013): pp. 1-15, Springer Berlin Heidelberg
