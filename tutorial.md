@@ -62,7 +62,7 @@ python3 -m venv .venv
 echo "export PYTHONPATH=$PWD" >> .venv/bin/activate
 source .venv/bin/activate
 pip install --upgrade pip setuptools wheel
-pip install -r requirements-dev.txt
+pip install -r requirements.txt
 ```
 
 **3. Загрузите данные**
@@ -70,7 +70,7 @@ pip install -r requirements-dev.txt
 Загрузите данные с [https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset) в каталог `data/`.
 
 ```bash
-python src/pipelines/load_data.py
+python src/load_data.py
 ```
 
 **4. Запустите интерфейс MLflow**
@@ -176,7 +176,7 @@ with mlflow.start_run() as run:
         #...
     ```
 
-    Эта строка инициирует новый запуск экспериментав MLFlow. with гарантирует, что все, что находится внутри этого блока, будет относиться к текущему Run. После завершения блока, контекст автоматически закрывается.
+    Эта строка инициирует новый запуск экспериментав MLFlow. `with` гарантирует, что все, что находится внутри этого блока, будет относиться к текущему Run. После завершения блока, контекст автоматически закрывается.
 
 2. **Логирование параметров модели**:
 
