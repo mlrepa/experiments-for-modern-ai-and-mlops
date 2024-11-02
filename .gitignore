@@ -6,10 +6,13 @@ reports/*
 prefect/*
 .dev/
 .python-version
+*/*.csv
+
 
 # MLFlow 
 mlruns/*
 mlartifacts/*
+notebooks/mlruns/*
 
 
 # Byte-compiled / optimized / DLL files

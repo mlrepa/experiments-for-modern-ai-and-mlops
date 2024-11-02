@@ -52,9 +52,9 @@ python src/load_data.py
 ## 📺 Run MLflow UI
 
 ```bash
-mlflow ui
+mlflow server --host 0.0.0.0 --port 5001
 ``` 
-And then navigate to [http://localhost:5000](http://localhost:5000) in your browser
+And then navigate to [http://localhost:5001](http://localhost:5001) in your browser
 
 
 ## 🎓 Run the tutorial
