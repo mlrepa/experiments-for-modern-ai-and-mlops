@@ -7,12 +7,9 @@
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
-- [Features](#-features)
 - [Project Structure](#-project-structure)
-- [Prerequisites](#-prerequisites)
 - [Quick Start](#-quick-start)
 - [Development Workflow](#-development-workflow)
-- [Usage](#-usage)
 - [MLFlow UI](#-mlflow-ui)
 - [Tutorial](#-tutorial)
 - [Contributing](#-contributing)
@@ -107,36 +104,6 @@ mlflow server --host 0.0.0.0 --port 5001  # Start MLFlow UI
 jupyter lab                 # Start Jupyter for tutorials
 ```
 
-## 🎯 Usage
-
-### Running ML Experiments
-
-```python
-import mlflow
-import mlflow.sklearn
-from sklearn.ensemble import RandomForestRegressor
-
-# Start MLFlow experiment
-mlflow.set_experiment("bike_sharing_experiment")
-
-with mlflow.start_run():
-    # Your model training code
-    model = RandomForestRegressor(n_estimators=100)
-    model.fit(X_train, y_train)
-
-    # Log parameters
-    mlflow.log_param("n_estimators", 100)
-
-    # Log metrics
-    mlflow.log_metric("rmse", rmse_score)
-
-    # Log model with MLflow 3.1 enhanced features
-    mlflow.sklearn.log_model(
-        sk_model=model,
-        artifact_path="model",
-        registered_model_name="BikeSharing_RandomForest"
-    )
-```
 
 ## 📺 MLFlow UI
 
