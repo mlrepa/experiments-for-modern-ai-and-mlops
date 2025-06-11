@@ -102,7 +102,7 @@ Then navigate to [http://localhost:5001](http://localhost:5001) in your browser 
 
 ## 🎓 Tutorial
 
-Launch Jupyter Lab to access the interactive tutorials:
+Launch Jupyter Lab to access the interactive tutorials in `notebooks/` directory:
 
 ```bash
 jupyter lab
