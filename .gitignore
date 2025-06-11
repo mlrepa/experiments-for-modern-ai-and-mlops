@@ -1,18 +1,14 @@
-# Project 
-.venv 
+# Project
+.venv
 data/*
 models/*
 reports/*
 prefect/*
-.dev/
-.python-version
+dev/*
 */*.csv
-
-
-# MLFlow 
 mlruns/*
 mlartifacts/*
-notebooks/mlruns/*
+docs/*
 
 
 # Byte-compiled / optimized / DLL files

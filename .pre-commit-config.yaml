@@ -1,0 +1,36 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: check-toml
+    -   id: check-json
+    -   id: check-added-large-files
+        args:
+        - --maxkb=5120
+    -   id: check-merge-conflict
+    -   id: debug-statements
+        exclude: ^(tests/|notebooks/)
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.11
+    hooks:
+    -   id: ruff
+        args:
+        - --fix
+        - --exit-non-zero-on-fix
+        types_or:
+        - python
+        - pyi
+    -   id: ruff-format
+        types_or:
+        - python
+        - pyi
+exclude: "(?x)^(\n    \\.venv/|\n    \\.git/|\n    __pycache__/|\n    \\.pytest_cache/|\n
+    \   \\.ruff_cache/|\n    mlruns/|\n    mlartifacts/|\n    data/.*\\.csv|\n    models/.*\\.joblib\n)\n"
+ci:
+    autofix_commit_msg: '[pre-commit.ci] auto fixes'
+    autofix_prs: true
+    autoupdate_schedule: monthly
+    skip: []
