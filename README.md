@@ -58,34 +58,19 @@ mlflow-1-metrics-tracking/
 └── requirements.txt       # Project dependencies
 ```
 
-## 🛠️ Prerequisites
-
-Ensure you have the following installed:
-
-- **Python 3.9+**: [Download Python](https://www.python.org/downloads/)
-- **Git**: [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- **Jupyter**: For running tutorial notebooks
-
 ## 🚀 Quick Start
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://gitlab.com/risomaschool/tutorials-raif/mlflow-1-metrics-tracking.git
+git clone [YOUR_REPO_URL]
 cd mlflow-1-metrics-tracking
 ```
 
 ### 2. Set Up the Environment
 
 ```bash
-# Create virtual environment
-python3 -m venv .venv
-echo "export PYTHONPATH=$PWD" >> .venv/bin/activate
-source .venv/bin/activate
-
-# Install dependencies
-pip install --upgrade pip setuptools wheel
-pip install -r requirements.txt
+make install-all
 ```
 
 ### 3. Download the Dataset
