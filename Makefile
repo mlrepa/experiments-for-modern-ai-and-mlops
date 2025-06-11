@@ -111,11 +111,6 @@ venv-info: ## Show virtual environment information
 	@echo "Installed packages:"
 	@uv pip list
 
-
-jupyter: ## Start Jupyter Lab
-	uv run jupyter lab
-
-
 # Development utilities
 watch-tests: ## Run tests automatically when files change (requires entr)
 	find src tests -name "*.py" | entr -c make test

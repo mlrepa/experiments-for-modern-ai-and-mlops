@@ -9,7 +9,6 @@
 - [Overview](#-overview)
 - [Project Structure](#-project-structure)
 - [Quick Start](#-quick-start)
-- [Development Workflow](#-development-workflow)
 - [MLFlow UI](#-mlflow-ui)
 - [Tutorial](#-tutorial)
 - [Contributing](#-contributing)
@@ -67,7 +66,8 @@ cd mlflow-1-metrics-tracking
 ### 2. Set Up the Environment
 
 ```bash
-make install-all
+make setup                  # Create virtual environment
+make install-all            # Install dependencies
 ```
 
 ### 3. Download the Dataset
@@ -83,27 +83,6 @@ python src/load_data.py
 # Check if MLFlow is properly installed
 mlflow --version
 ```
-
-## 💻 Development Workflow
-
-This project focuses on learning MLFlow through practical examples. Use the Makefile for easy commands:
-
-### Key Development Commands
-
-```bash
-# Quick start workflow
-make setup                  # Create virtual environment
-make install               # Install dependencies
-make load-data             # Download dataset
-make mlflow-ui             # Start MLFlow UI (port 5001)
-make jupyter               # Start Jupyter Lab
-
-# Alternative manual commands
-python src/load_data.py     # Download and prepare dataset
-mlflow server --host 0.0.0.0 --port 5001  # Start MLFlow UI
-jupyter lab                 # Start Jupyter for tutorials
-```
-
 
 ## 📺 MLFlow UI
 
