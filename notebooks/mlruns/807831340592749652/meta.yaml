@@ -1,0 +1,6 @@
+artifact_location: file:///Users/artemsokolov/study/mlops/experiments-for-modern-ai-and-mlops/notebooks/mlruns/807831340592749652
+creation_time: 1750144443435
+experiment_id: '807831340592749652'
+last_update_time: 1750144443435
+lifecycle_stage: active
+name: 5-genai-with-mlflow-3
